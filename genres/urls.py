@@ -1,7 +1,7 @@
 from django.urls import path
-from genres.views import genre_detail_view, genres_create_list_view
+from genres.views import GenreCreateListView
 
 urlpatterns = [
-    path('genres/', genres_create_list_view, name='genres'),
-    path('genres/<int:pk>/', genre_detail_view, name='genres_detail'),
+    path('genres/', GenreCreateListView.as_view(), name='genres-create-list'),
+    # path('genres/<int:pk>/', genre_detail_view, name='genres_detail'),
 ]
