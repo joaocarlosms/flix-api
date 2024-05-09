@@ -15,3 +15,6 @@ class Review(models.Model):
         ]
     )
     comment = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.movie
